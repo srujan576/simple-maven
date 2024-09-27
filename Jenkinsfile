@@ -2,22 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Validate') {
+        stage ('Validate') {
             steps {
                 sh 'mvn validate'
             }
         }
-        stage('Compile') {
+        stage ('Compile') {
             steps {
                 sh 'mvn compile'
             }
         }
-        stage('Test') {
+        stage ('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-        stage('Build') {
+        stage ('Build') {
             steps {
                 sh 'mvn clean package'
             }
